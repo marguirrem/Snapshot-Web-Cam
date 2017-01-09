@@ -1,0 +1,39 @@
+body{
+	text-align: center;
+}
+
+#video{display: none;}
+
+#camara{
+	display: inline-block;
+	position: relative;
+}
+
+#snap{
+	position: absolute;
+	border-radius: 50%;
+	border: 5px solid white;
+	background-color: gray;
+	width: 100px;
+	height: 100px;
+	bottom:2.5em;
+	left: 200px;
+	cursor: pointer;
+}
+
+#actions{
+	position: absolute;
+	top:1em;
+	right: 1em;
+	color: white;
+
+}
+
+a{
+	text-decoration: none;
+	color: white;
+	margin-right: 1em;
+}
+a:activate{
+	color: inherit;
+}
