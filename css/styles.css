@@ -26,6 +26,8 @@ body{
 	top:1em;
 	right: 1em;
 	color: white;
+	display: none;
+	cursor: pointer;
 
 }
 

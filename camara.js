@@ -15,6 +15,22 @@ class Camara{
 		});
 
 	}
+	snap(){
+		this.video.pause();
+	}
+
+	download(){
+		var imnageURL = this.canvas.toDataURL("image/png");
+			var link = document.getElementById("link");
+			link.href=imnageURL;
+			link.download= "photo.png";
+			link.click();
+	}
+
+	playVideo(){
+		this.video.play();
+	}
+	
 	setVideo(localMediaStream){
 		this.video.src = window.URL.createObjectURL(localMediaStream);
 	}

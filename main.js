@@ -1,15 +1,23 @@
 ;(function () {
-	console.log("Lanzado");
 	var camara = new Camara("video","canvas",function(){
 
 		var snapBtn = document.getElementById("snap");	
+		var btnDownload = document.getElementById("download");
+		var btnSticker = document.getElementById("sticker");
+		var btnCancel = document.getElementById("cancel");
+
 		snapBtn.addEventListener("click",function(){
-			var imnageURL = camara.canvas.toDataURL("image/png");
-			var link = document.getElementById("link");
-			link.href=imnageURL;
-			link.download= "photo.png";
-			link.click();
+			camara.snap();
+			document.getElementById("actions").style.display = "block";
 		});
+		btnDownload.addEventListener("click",function(){
+			camara.download();
+		});
+		btnCancel.addEventListener("click",function(){
+			camara.playVideo();
+			document.getElementById("actions").style.display = "none";
+		});
+	
 	});
 })();
 
